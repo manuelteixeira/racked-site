@@ -1,9 +1,9 @@
 /* Custom styles */
 :root {
     /* Theme colors - these can be overridden dynamically */
-    --primary-color: #2563eb;
+    --primary-color: #c2410c;
     --primary-hover: color-mix(in srgb, var(--primary-color) 84%, black);
-    --primary-rgb: 37, 99, 235;
+    --primary-rgb: 194, 65, 12;
 
     /* Text colors */
     --text-dark: #0a0a0a;
