@@ -61,6 +61,11 @@
     --bs-link-color-rgb: var(--primary-rgb);
     --bs-link-hover-color: var(--primary-hover);
     --bs-link-hover-color-rgb: var(--primary-rgb);
+    --bs-btn-active-bg: var(--primary-hover);
+    --bs-btn-active-border-color: var(--primary-hover);
+    --bs-btn-hover-bg: var(--primary-hover);
+    --bs-btn-hover-border-color: var(--primary-hover);
+    --bs-btn-focus-shadow-rgb: var(--primary-rgb);
 }
 
 /* Dark mode via class */
@@ -360,6 +365,25 @@ img {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(var(--primary-rgb), 0.3);
     text-decoration: none;
+}
+
+.cta-button:active,
+.cta-button:focus,
+.cta-button:focus-visible {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: #fff !important;
+}
+
+.cta-button:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.4);
+}
+
+.cta-button-primary:active,
+.cta-button-primary:focus,
+.cta-button-primary:focus-visible {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-hover) 100%);
 }
 
 .nav-cta-button {
