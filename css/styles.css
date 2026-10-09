@@ -392,6 +392,22 @@ img {
     box-shadow: none;
 }
 
+/* Bootstrap .btn-primary redefines all --bs-btn-* vars on its own selector,
+   so :root-level overrides can't reach it. Re-point the full set to the brand
+   orange here, matching selector specificity. Covers the header Download button
+   (plain .btn-primary) in resting, hover, active, focus, and disabled states. */
+.btn-primary {
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-bg: var(--primary-hover);
+    --bs-btn-hover-border-color: var(--primary-hover);
+    --bs-btn-active-bg: var(--primary-hover);
+    --bs-btn-active-border-color: var(--primary-hover);
+    --bs-btn-focus-shadow-rgb: var(--primary-rgb);
+    --bs-btn-disabled-bg: var(--primary-color);
+    --bs-btn-disabled-border-color: var(--primary-color);
+}
+
 .nav-cta-button:hover {
     box-shadow: 0 10px 24px rgba(var(--primary-rgb), 0.18);
 }
